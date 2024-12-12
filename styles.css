@@ -46,8 +46,8 @@ a {
 }
 
 .project-card {
-  width: 800px;
-  height: 800px;
+  width: 350px;
+  height: 200px;
   background: #1e1e1e;
   border-radius: 10px;
   padding: 20px;
@@ -64,12 +64,13 @@ a {
 }
 
 .project-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
 .project-desc {
   flex-grow: 1;
+  font-size: 0.9em;
 }
 
 /* Buttons */
@@ -88,11 +89,10 @@ a {
   background: #ff6347;
 }
 
-/* Download Button */
-.download-btn {
-  background: #ff6347;
-}
-
-.download-btn:hover {
-  background: #1e90ff;
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e1e1e;
+  margin-top: 20px;
 }
