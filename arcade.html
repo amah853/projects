@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade Management | Ahmad Mahrous</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="project-header">
+    <div class="container">
+      <h1>Arcade Management - <a href="arcade-project.zip" class="btn download-btn">Download</a></h1>
+    </div>
+  </header>
+
+  <!-- Project Details -->
+  <section class="project-details">
+    <div class="container">
+      <h2>About the Project</h2>
+      <p>
+        This project is all about making arcades easier to run! It’s a system where managers can set up games and their prices, attendants can handle payments and add tickets to cards, and prize counters can help people trade tickets for prizes. It’s built using Python and called Flask, and everything is stored in a database. The design is simple and modern. Check it out!
+      </p>
+      <ul>
+        <li>Running Locally & Private</li>
+        <li>Database Run</li>
+        <li>Uses RFID Scanners</li>
+      </ul>
+      <h1>Installation and Deployment Instructions</h1>
+
+    <p>Follow these steps to get the Arcade Management System running locally and deploy it.</p>
+
+    <h2>Prerequisites</h2>
+    <p>Before you begin, make sure you have the following tools installed on your machine:</p>
+    <ul>
+        <li><strong>Python 3.x</strong>: The primary programming language for this project.</li>
+        <li><strong>Git</strong>: To clone the project repository.</li>
+        <li><strong>SQLite</strong>: A lightweight database for storing data locally.</li>
+    </ul>
+
+    <h2>1. Download Project</h2>
+    <p>First, click the download button above and unzip the below file.</p>
+    <pre><code>arcade-project.zip</code></pre>
+
+    <h2>2. Set Up a Virtual Environment</h2>
+    <p>It’s a good idea to use a virtual environment to manage the dependencies for this project. In your terminal, navigate to the project folder and run the following commands:</p>
+    <pre><code>cd arcade-management-system
+python3 -m venv venv</code></pre>
+    <p>This will create a virtual environment named <code>venv</code>.</p>
+
+    <h2>3. Activate the Virtual Environment</h2>
+    <p>Activate the virtual environment:</p>
+    <ul>
+        <li><strong>On macOS/Linux:</strong> <code>source venv/bin/activate</code></li>
+        <li><strong>On Windows:</strong> <code>venv\Scripts\activate</code></li>
+    </ul>
+    <p>You should now see <code>(venv)</code> in your terminal, indicating that the virtual environment is active.</p>
+
+    <h2>4. Install the Required Dependencies</h2>
+    <p>With the virtual environment active, install the project’s dependencies by running:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
+    <p>This will install Flask, SQLite, and any other necessary libraries listed in the <code>requirements.txt</code> file.</p>
+
+    <h2>5. Initialize the Database</h2>
+    <p>Next, initialize the SQLite database by running the <code>initialize_db.py</code> script. This will set up the necessary tables in the database:</p>
+    <pre><code>python initialize_db.py</code></pre>
+
+    <h2>6. Run the Project Locally</h2>
+    <p>Now that everything is set up, you can run the project locally. In your terminal, make sure you’re in the project directory and then run:</p>
+    <pre><code>python app.py</code></pre>
+    <p>This will start a local development server. By default, the website will be accessible at <code>http://127.0.0.1:80/</code> in your browser. You can also just go to <code>http://localhost</code></p>
+
+    <h2>Deployment</h2>
+    <p>To deploy the project online, you can use platforms like <strong>Heroku</strong>, <strong>DigitalOcean</strong>, or <strong>AWS</strong>. Below are instructions for deploying to <strong>Heroku</strong>.</p>
+
+    <h3>1. Install Heroku CLI</h3>
+    <p>If you don’t have the Heroku CLI installed, download and install it from the official <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">Heroku website</a>.</p>
+
+    <h3>2. Log in to Heroku</h3>
+    <p>After installing the Heroku CLI, log in to your Heroku account by running the following command in your terminal:</p>
+    <pre><code>heroku login</code></pre>
+    <p>This will open a new browser window to authenticate your account.</p>
+
+    <h3>3. Create a Heroku App</h3>
+    <p>Navigate to your project directory in the terminal, then create a new Heroku app by running:</p>
+    <pre><code>heroku create</code></pre>
+    <p>This will automatically generate a unique name for your app and set up a remote repository for Heroku deployment.</p>
+
+    <h3>4. Set Up the Database on Heroku</h3>
+    <p>You’ll need to use a cloud-based database for Heroku, such as <strong>Heroku Postgres</strong> or <strong>SQLite</strong> (for simplicity, SQLite can be used for small apps).</p>
+    <p>To add a Heroku Postgres database, run:</p>
+    <pre><code>heroku addons:create heroku-postgresql:hobby-dev</code></pre>
+    <p>This will provision a PostgreSQL database for your app on Heroku.</p>
+
+    <h3>5. Push the Code to Heroku</h3>
+    <p>Once your app is set up, deploy your project to Heroku by pushing the code to Heroku’s remote repository:</p>
+    <pre><code>git push heroku master</code></pre>
+    <p>Heroku will automatically detect the Python application and install the necessary dependencies from <code>requirements.txt</code>.</p>
+
+    <h3>6. Open the App</h3>
+    <p>Once the deployment is finished, open your app in the browser by running:</p>
+    <pre><code>heroku open</code></pre>
+    <p>Your app will now be live!</p>
+
+    <h2>Advanced Customization</h2>
+    <p>If you want to customize the project or deployment settings, here are some things you can do:</p>
+    <ul>
+        <li><strong>Database:</strong> You can modify the <code>initialize_db.py</code> script to work with other databases like PostgreSQL instead of SQLite.</li>
+        <li><strong>Configuration:</strong> For advanced configuration, you can adjust the <code>app.py</code> file to support environment variables (e.g., for API keys or production settings).</li>
+        <li><strong>Deployment to Other Platforms:</strong> If you're using a platform other than Heroku, check the specific deployment instructions for that platform. For example, on DigitalOcean, you'll need to set up a Droplet and configure your web server (like Nginx or Apache).</li>
+    </ul>
+</body>
+</html>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div class="container">
+      <p>&copy; 2024 Ahmad Mahrous | Made with 💻 and ❤️</p>
+    </div>
+  </footer>
+</body>
+</html>
