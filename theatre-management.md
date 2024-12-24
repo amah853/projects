@@ -114,11 +114,11 @@ You can choose not to use authentication by instead running the no auth version.
 - **Styles Not Loading**:
   Ensure the `static` folder is present and contains the required CSS files.
 
-  ---
+---
 
   ## Issues
   You can contact me at me@ahmad-mahrous.com
 
-  ---
+---
 
-  #- By Ahmad Mahrous 2024
+-# By Ahmad Mahrous 2024
