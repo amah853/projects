@@ -1,6 +1,6 @@
 # Movie Theater System - Setup Instructions
 
-A web application for managing RFID-based movie passes. Download at projects.ahmad-mahrous.com/theatre-management.zip
+A web application for managing RFID-based movie passes. Download at https://projects.ahmad-mahrous.com/theatre-management.zip
 
 ## Features
 
