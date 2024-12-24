@@ -58,6 +58,7 @@ python app.py
 
 By default, the application will run on `http://0.0.0.0:80`.
 You can change this by going into app.py and changing the port on the last two lines of the file.
+
 ---
 
 ## Default Manager Credentials
